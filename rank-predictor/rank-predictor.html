@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank Predictor | ApplyCollege</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../assets/ApplyCollegeFavilcon.jpg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html">ApplyCollege</a></h1>
+            <p>EAMCET Rank Predictor | AP EAMCET 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="rank-predictor.html" class="active">Rank Predictor</a></li>
+                <li><a href="../college-predictor/college-predictor.html">College Predictor</a></li>
+                <li><a href="../counseling/counseling.html">Counseling Guidance @199 Rs</a></li>
+                <li><a href="../eamcet updates & process/updates.html">EAMCET updates & process</a></li>
+                <li><a href="../authentication/signup.html">Signup\  Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="rank-predictor">
+            <h2>EAMCET Rank Predictor</h2>
+            <div class="note">
+                <p><strong>Note:</strong> This is an estimated rank based on your intermediate marks and expected EAMCET performance.</p>
+            </div>
+            <form id="rankForm">
+                <div class="form-group">
+                    <label for="firstYear">1st Year Marks (Out of 270 - Without Languages)</label>
+                    <input type="number" id="firstYear" required min="0" max="270">
+                </div>
+                <div class="form-group">
+                    <label for="secondYear">2nd Year Marks (Out of 330 - With Practicals)</label>
+                    <input type="number" id="secondYear" required min="0" max="330">
+                </div>
+                <div class="form-group">
+                    <label for="stream">Stream</label>
+                    <select id="stream" required>
+                        <option value="MPC">MPC</option>
+                        <option value="BiPC">BiPC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="estimatedMarks">EAMCET Marks (Out of 160 - 75% Weightage)</label>
+                    <input type="number" id="estimatedMarks" required min="0" max="160">
+                </div>
+                <button type="submit" class="btn">Predict Rank</button>
+            </form>
+            <div id="result" class="result-card" style="display: none;">
+                <h3>Your Estimated Rank</h3>
+                <div id="rankValue"></div>
+                <div class="counseling-cta">
+                    <p><strong>Predict college Based on your Rank</strong></p>
+                    <a href="../college-predictor/college-predictor.html" class="btn counseling-btn">
+                        <i class="fa fa-calculator" aria-hidden="true"></i>Predict Now
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+        <div class="disclaimer-container">
+    <div class="disclaimer-content">
+        <h3 class="disclaimer-heading">⚠️ Important Disclaimer</h3>
+        <p class="disclaimer-text">
+            The <strong>EAMCET 2025 rank and college predictions</strong> provided on this website are 
+            based on analysis of previous years' cutoff data and trends. These predictions are 
+            <strong>estimates only</strong> and actual admission results may vary based on Government policy:
+        </p>
+        <!--<ul class="disclaimer-factors">
+            <li>Changes in total number of applicants</li>
+            <li>Variations in exam difficulty and scoring patterns</li>
+            <li>Modifications in reservation policies</li>
+            <li>College-specific seat availability changes</li>
+            <li>Government policy updates</li>
+        </ul>-->
+        <p class="disclaimer-note">
+            <strong>Note:</strong> This tool should be used as a <strong>guideline only</strong>. 
+            Always verify with official college admission committees during counseling. 
+            We are not responsible for admission decisions based on these predictions.
+        </p>
+    </div>
+    </main>
+
+    <footer>
+        <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+        <div class="container">
+            <p>&copy; 2025 ApplyCollege. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="rank-predictor.js"></script>
+</body>
+</html>
